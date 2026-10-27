@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elias R Ysmael | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olive:#262d22;
+  --olive-2:#323a2c;
+  --khaki:#e2d9bd;
+  --sand:#a9a58c;
+  --brass:#d1a63a;
+  --rust:#c4503a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--olive);color:var(--khaki);font-family:"Source Serif 4",Georgia,serif;font-size:clamp(.95rem,1.9vh,1.1rem);line-height:1.6;overflow:hidden}
+a{color:var(--brass)}
+a:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+h1{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;line-height:.95;text-transform:uppercase;font-size:clamp(2.6rem,10vh,6rem)}
+
+.page{height:100dvh;display:flex;align-items:center;justify-content:center;padding:4vh 5vw}
+.card{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,64px);align-items:center;max-width:1000px;width:100%}
+
+.frame{position:relative;height:min(62vh,440px);aspect-ratio:4/5;background:var(--olive-2)}
+.frame::before,.frame::after{content:"";position:absolute;width:34px;height:34px;border:3px solid var(--brass)}
+.frame::before{top:-10px;left:-10px;border-right:0;border-bottom:0}
+.frame::after{bottom:-10px;right:-10px;border-left:0;border-top:0}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+
+.role{margin:1.2vh 0 2vh;color:var(--brass);font-style:italic;font-size:1.1em}
+.text p+p{margin-top:1.2vh}
+.motto{margin-top:2.4vh;padding:1.2vh 18px;border-left:4px solid var(--rust);background:var(--olive-2);font-style:italic}
+.motto small{display:block;font-style:normal;color:var(--sand);font-size:.8em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:2.4vh}
+.tags li{padding:3px 14px;background:var(--olive-2);border-bottom:3px solid var(--brass);font-size:.85em}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:2.6vh}
+.links a{color:var(--khaki);text-decoration:none;padding:7px 18px;border:1.5px solid var(--sand);font-size:.9em;transition:background .2s,color .2s,border-color .2s}
+.links a:hover{background:var(--brass);border-color:var(--brass);color:var(--olive)}
+.copy{position:fixed;bottom:1.2vh;left:0;right:0;text-align:center;color:var(--sand);font-size:.75rem}
+
+@media (prefers-reduced-motion:no-preference){
+  .card{animation:rise .8s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+
+/* phones and small windows: stack and allow scrolling so nothing gets cut off */
+@media (max-width:760px),(max-height:560px){
+  body{overflow:auto}
+  .page{height:auto;min-height:100dvh;padding:40px 24px 60px}
+  .card{grid-template-columns:1fr}
+  .frame{height:auto;width:min(240px,70%)}
+  h1{font-size:clamp(2.6rem,14vw,4rem)}
+  .copy{position:static;margin-top:30px}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="card">
+    <div class="frame">
+      <img src="IMG_20261027_215901_307.jpg" alt="Photo of Elias R Ysmael">
+    </div>
+    <div class="text">
+      <h1>Elias R Ysmael</h1>
+      <p class="role">BSIT student, University of the Cordilleras</p>
+      <p>I live in Baguio City. I'm interested in firearms, the military, and the equipment they use.</p>
+      <p>I got into computers because of how the military and law enforcement use them. Now I'm learning how these machines work, so I can turn it into skills that earn a living and honor God.</p>
+      <p class="motto">Ad Majorem Dei Gloriam<small>For the greater glory of God</small></p>
+      <ul class="tags">
+        <li>Firearms</li>
+        <li>Military equipment</li>
+        <li>Computers</li>
+        <li>Information technology</li>
+      </ul>
+      <div class="links">
+        <a href="mailto:eliasysmael2@gmail.com">Mail</a>
+        <a href="https://github.com/JalisCbLuv">GitHub</a>
+        <a href="https://www.facebook.com/share/1MQyquABq1/">Facebook</a>
+        <a href="https://www.instagram.com/jalis_pythonnn">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <p class="copy">© 2026 Elias R Ysmael. All rights reserved.</p>
+</div>
+
+</body>
+</html>
