@@ -48,14 +48,18 @@ h1{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900
   @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 }
 
-/* phones and small windows: stack and allow scrolling so nothing gets cut off */
-@media (max-width:760px),(max-height:560px){
-  body{overflow:auto}
-  .page{height:auto;min-height:100dvh;padding:40px 24px 60px}
-  .card{grid-template-columns:1fr}
-  .frame{height:auto;width:min(240px,70%)}
-  h1{font-size:clamp(2.6rem,14vw,4rem)}
-  .copy{position:static;margin-top:30px}
+/* phones: stay on one screen, shrink and hide extras to fit */
+@media (max-width:760px){
+  .page{padding:3vh 20px}
+  .card{grid-template-columns:1fr;gap:2vh;text-align:center}
+  .frame{height:22vh;width:auto;margin:0 auto}
+  h1{font-size:clamp(2rem,10vw,3rem)}
+  .role{margin:.5vh 0 1vh}
+  .text p:nth-of-type(2){display:none}
+  .tags{display:none}
+  .motto{margin-top:1.5vh;text-align:left}
+  .links{justify-content:center;margin-top:2vh}
+  .copy{display:none}
 }
 </style>
 </head>
