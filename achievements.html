@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Achievements | Elias R Ysmael</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olive:#262d22;
+  --olive-2:#323a2c;
+  --khaki:#e2d9bd;
+  --sand:#a9a58c;
+  --brass:#d1a63a;
+  --rust:#c4503a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--olive);color:var(--khaki);font-family:"Source Serif 4",Georgia,serif;font-size:clamp(.9rem,1.8vh,1.05rem);line-height:1.5;overflow:hidden}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+h1,h2{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;text-transform:uppercase;line-height:.95}
+h1{font-size:clamp(2.2rem,9vh,5rem)}
+h2{font-size:clamp(1.2rem,3.2vh,1.8rem)}
+
+.page{height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3vh;padding:4vh 5vw}
+.head{max-width:1000px;width:100%}
+.head p{color:var(--brass);font-style:italic;margin-top:1vh}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2.5vw,28px);max-width:1000px;width:100%}
+.item{display:flex;gap:18px;align-items:center;background:var(--olive-2);padding:clamp(12px,2.2vh,20px) 18px;border-left:4px solid var(--brass)}
+.item:nth-child(even){border-left-color:var(--rust)}
+
+.proof{position:relative;flex:none;width:clamp(96px,22vh,170px);aspect-ratio:4/3;border:2px solid var(--brass);background:var(--olive);cursor:zoom-in;color:var(--sand);font:italic .8em "Source Serif 4",Georgia,serif;display:grid;place-items:center;overflow:hidden}
+.item:nth-child(even) .proof{border-color:var(--rust)}
+.proof img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof:hover{border-color:var(--khaki)}
+
+.year{display:inline-block;margin:.5vh 0;padding:0 12px;background:var(--olive);border-bottom:3px solid var(--brass);font-size:.8em}
+.item:nth-child(even) .year{border-bottom-color:var(--rust)}
+.desc{color:var(--sand);font-size:.9em}
+
+.nav{max-width:1000px;width:100%;display:flex;flex-wrap:wrap;gap:10px}
+.nav a{color:var(--khaki);text-decoration:none;padding:7px 18px;border:1.5px solid var(--sand);font-size:.9em;transition:background .2s,color .2s,border-color .2s}
+.nav a:hover{background:var(--brass);border-color:var(--brass);color:var(--olive)}
+.copy{position:fixed;bottom:1.2vh;left:0;right:0;text-align:center;color:var(--sand);font-size:.75rem}
+
+/* enlarged proof */
+.lightbox{position:fixed;inset:0;background:rgba(18,22,15,.94);display:none;align-items:center;justify-content:center;padding:4vh 4vw;cursor:zoom-out;z-index:10}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:92vh;border:3px solid var(--brass);background:var(--olive)}
+.lightbox span{position:absolute;top:2vh;right:4vw;color:var(--sand);font-size:.9em}
+
+@media (prefers-reduced-motion:no-preference){
+  .grid{animation:rise .8s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+
+@media (max-width:760px){
+  .page{padding:3vh 18px;gap:2vh}
+  h1{font-size:clamp(2rem,10vw,3rem)}
+  .grid{grid-template-columns:1fr;gap:1.2vh}
+  .item{padding:1.2vh 12px;gap:14px}
+  .proof{width:clamp(72px,16vh,110px)}
+  .desc{display:none}
+  .nav{justify-content:center}
+  .copy{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="head">
+    <h1>Achievements</h1>
+    <p>Awards, recognitions and milestones, with proof. Tap a picture to enlarge it.</p>
+  </header>
+
+  <main class="grid">
+    <section class="item">
+      <button class="proof" type="button" aria-label="Enlarge proof for Achievement 1">Proof<img src="proof-1.jpg" alt="Proof of Achievement 1" onerror="this.remove()"></button>
+      <div>
+        <h2>Your Achievement 1</h2>
+        <span class="year">2026</span>
+        <p class="desc">A short line about what you did or earned.</p>
+      </div>
+    </section>
+
+    <section class="item">
+      <button class="proof" type="button" aria-label="Enlarge proof for Achievement 2">Proof<img src="proof-2.jpg" alt="Proof of Achievement 2" onerror="this.remove()"></button>
+      <div>
+        <h2>Your Achievement 2</h2>
+        <span class="year">2025</span>
+        <p class="desc">A short line about what you did or earned.</p>
+      </div>
+    </section>
+
+    <section class="item">
+      <button class="proof" type="button" aria-label="Enlarge proof for Achievement 3">Proof<img src="proof-3.jpg" alt="Proof of Achievement 3" onerror="this.remove()"></button>
+      <div>
+        <h2>Your Achievement 3</h2>
+        <span class="year">2024</span>
+        <p class="desc">A short line about what you did or earned.</p>
+      </div>
+    </section>
+
+    <section class="item">
+      <button class="proof" type="button" aria-label="Enlarge proof for Achievement 4">Proof<img src="proof-4.jpg" alt="Proof of Achievement 4" onerror="this.remove()"></button>
+      <div>
+        <h2>Your Achievement 4</h2>
+        <span class="year">2023</span>
+        <p class="desc">A short line about what you did or earned.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="schools.html">Education</a>
+    <a href="mailto:eliasysmael2@gmail.com">Mail</a>
+  </nav>
+
+  <p class="copy">© 2026 Elias R Ysmael. All rights reserved.</p>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged proof"><span>Tap anywhere to close</span><img alt=""></div>
+
+<script>
+(function(){
+  var box=document.getElementById("lightbox"),big=box.querySelector("img");
+  document.querySelectorAll(".proof").forEach(function(b){
+    b.addEventListener("click",function(){
+      var img=b.querySelector("img");
+      if(!img)return;
+      big.src=img.src;big.alt=img.alt;box.classList.add("open");
+    });
+  });
+  function close(){box.classList.remove("open")}
+  box.addEventListener("click",close);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+</script>
+</body>
+</html>
